@@ -1,0 +1,191 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>로그인</title>
+        <style>
+            .login-title{
+                padding-top: 40px;
+                font-weight: 800;
+                font-size: 23px;
+            }
+            .m2{
+                background:white;
+                box-shadow:  0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0,0,0,0.22);
+                border-radius: 10px;
+                position:relative; 
+                width: 40%; 
+                height: 850px;
+                margin: 0 auto;
+                text-align: center;
+                align-items: center;
+            } 
+            .input-table{
+                margin: 0 auto;
+                width: 67%;
+                text-align: center;
+                align-items: center;
+                margin-top: 15px;
+                border-radius: 10px;
+                border-left: 5px solid #252A38;
+                box-shadow:  2px 5px 20px 2px rgba(200, 205, 211, 0.7);
+            }
+            .input-table tr{
+                height: 58px;
+            }
+            .input-table td:nth-child(1){
+                width: 12%;
+                font-size: 14px;
+                font-weight: 800;
+            }
+            .input-table td:nth-child(2){
+                width: 55%;
+            }
+            .input-table input{
+                height: 34px;
+                width: 90%;
+                background-color: white;
+                border: none;
+            }
+            .login-btn{
+                width: 67%;
+                height: 60px;
+                margin-top: 25px;
+                border-radius: 5px;
+                border: none;
+                font-size: 16px;
+                font-weight: 800;
+                color: white;
+                background-color: #252A38;
+            }
+            .login-btn:hover{
+                cursor: pointer;
+                background-color: #363c4b;
+            }
+            .select{
+                height: 50px;
+                width: 90%;
+                border: none;
+            }
+
+		</style>
+        <script></script>
+	</head>
+    <body>
+        <div class="m2">
+            <div class="login-title">AMGN</div>
+            <table class="input-table" style="margin-top: 35px;;">
+                <tr>
+                    <td>
+                        이름
+                    </td>
+                    <td>
+                        <div style="border-left: 2px solid rgb(204, 204, 204);"><input type="text" placeholder="홍길동"></div>
+                    </td>
+                </tr>
+            </table>
+            <table class="input-table">
+                <tr>
+                    <td>
+                        이메일
+                    </td>
+                    <td>
+                        <div style="border-left: 2px solid rgb(204, 204, 204);"><input type="text" placeholder="email@gmail.com"></div>
+                    </td>
+                </tr>
+            </table>
+            <table class="input-table">
+                <tr>
+                    <td>
+                        비밀번호
+                    </td>
+                    <td>
+                        <div style="border-left: 2px solid rgb(204, 204, 204);"><input type="password" placeholder="*****"></div>
+                    </td>
+                </tr>
+            </table>
+            <table class="input-table">
+                <tr>
+                    <td>
+                        거주지역
+                    </td>
+                    <td>
+                        <div style="border-left: 2px solid rgb(204, 204, 204);">
+                            <select class="select" required>
+                                <option value="강원도">강원도</option>
+                                <option value="경상남도">경상남도</option>
+                                <option value="경상북도">경상북도</option>
+                                <option value="검정고시">검정고시</option>
+                                <option value="광주광역시">광주광역시</option>
+                                <option value="대구광역시">대구광역시</option>
+                                <option value="대전광역시">대전광역시</option>
+                                <option value="부산광역시">부산광역시</option>
+                                <option value="세종시">세종시</option>
+                                <option value="인청광역시">인천광역시</option>
+                                <option value="전라남도">전라남도</option>
+                                <option value="전라북도">전라북도</option>
+                                <option value="제주특별자치도">제주특별자치도</option>
+                                <option value="충청남도">충청남도</option>
+                                <option value="충청북도">충청북도</option>
+                                
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <table class="input-table">
+                <tr>
+                    <td>
+                        교육수준
+                    </td>
+                    <td>
+                        <div style="border-left: 2px solid rgb(204, 204, 204);">
+                            <select class="select" required>
+                                <option value="중학교 졸업">중학교 졸업</option>
+                                <option value="고등학교 재학중">고등학교 재학중</option>
+                                <option value="고등학교 졸업">고등학교 졸업</option>
+                                <option value="검정고시">검정고시</option>
+                                <option value="대학교 재학중">대학교 재학중</option>
+                                <option value="대학교 졸업">대학교 졸업</option>
+                                <option value="석사 졸업">석사 졸업</option>
+                                <option value="박사 졸업">박사 졸업</option>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <table class="input-table">
+                <tr>
+                    <td>
+                        학교
+                    </td>
+                    <td>
+                        <div style="border-left: 2px solid rgb(204, 204, 204);"><input type="text" placeholder="영남대학교"></div>
+                    </td>
+                </tr>
+            </table>
+            <table class="input-table">
+                <tr>
+                    <td>
+                        전공
+                    </td>
+                    <td>
+                        <div style="border-left: 2px solid rgb(204, 204, 204);"><input type="text" placeholder="정보통신공학과" required></div>
+                    </td>
+                </tr>
+            </table>
+            <table class="input-table">
+                <tr>
+                    <td>
+                        흥미
+                    </td>
+                    <td>
+                        <div style="border-left: 2px solid rgb(204, 204, 204);"><input type="text" placeholder="빅데이터, 인공지능"></div>
+                    </td>
+                </tr>
+            </table>
+
+            <input class="login-btn" type="button" value="회원가입" onClick="location.href='login.html'">
+        </div> 
+
+	</body>
+</html>

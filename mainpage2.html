@@ -1,0 +1,438 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>메인페이지</title>
+        <style>
+
+            .box{
+                width: 100%;
+                height: 650px;
+                /* background-color: rgb(241, 241, 241); */
+            }
+            .LOGO{
+                width: 120px;
+                margin-left: 2%;
+            }
+            .USER{
+                width: 40px;
+                margin-right: 10px;
+            }
+            nav{background-color: white; height: 80px; box-shadow:  2px 5px 20px 2px rgba(243, 243, 243, 0.644);}
+            .nav-item{margin-left: 60px; color: black; font-weight: 800;}
+            .search-btn{
+                background-color: #FFCD4A;
+                border: none;
+                border-radius: 3px;
+                width: 40px;
+                height: 40px;
+            }
+            .search_icon{
+                width: 26px;
+            }
+            .box1{
+                width: 50%;
+                float: left;
+            }
+            .box2{
+                width: 50%;
+                float: left;
+            }
+            .box1 p{margin-left: 150px;}
+            .box1 input{margin-left: 150px;}
+            .box1 .text1{
+                padding-top: 220px;
+                font-size: 45px;
+                font-weight: 900;
+                color: #3e4968;
+            }
+            .box1 .text2{
+                font-size: 18px;
+                font-weight: 500;
+                color: rgb(53, 53, 59);
+            }
+            .bigdata_icon{
+                width: 65%;
+                padding-top: 45px;
+                margin-left: 100px;
+            }
+            .box3{
+                width: 100%;
+                text-align: center;
+                /* margin-left: 5%; */
+                background-color: rgb(241, 241, 241);
+                height: 800px;
+            }
+            .box3 p{
+                padding-top: 35px;
+                font-size: 28px;
+                font-weight: 900;
+            }
+            .sub-box{
+                width: 40%;
+                height: 310px;
+                float: left;
+                margin-left: 7%;
+                margin-top: 20px;
+                text-align: center;
+                align-items: center;
+                background-color: white;
+                box-shadow:  2px 5px 20px 2px rgba(200, 205, 211, 0.7);
+            }
+            /* ol.circle {
+                list-style: none;
+                counter-reset: item;
+            }
+
+            ol.circle > li{
+                counter-increment: item;
+                margin-bottom: 5px;
+            }
+
+            ol.circle > li:before {
+                margin-right: 10px;
+                content: counter(item);
+                background: #FFCD4A;
+                border-radius: 100%;
+                color: white;
+                width: 1.3em;
+                text-align: center;
+                display: inline-block;
+            } */
+            .sub-box p{
+                font-size: 20px;
+                font-weight: 900;
+                padding-top: 10px;
+            }
+            .sub-box table{width: 100%;}
+            .sub-box table tr{height: 40px;}
+            .sub-box table tr th{
+                background: #FFCD4A;
+                color: white;
+                font-weight: 900;
+            }
+            .sub-box table .tr1 th{background-color: #4FCD7B;}
+            .sub-box table .tr2 th{background-color: #87ceeb;}
+            .sub-box table .tr3 th{background-color: #a3b6e7;}
+            .sub-box table tr th:nth-child(1){
+                width: 20%;
+            }
+            .sub-box table tr th:nth-child(2){
+                width: 50%;
+            }
+            .sub-box table tr th:nth-child(3){
+                width: 20%;
+            }
+            .box4{
+                width: 100%;
+                height: 300px;
+                text-align: center;
+            }
+            .box4 .text1{
+                padding-top: 70px;
+                font-size: 18px;
+                font-weight: 600;
+                color: grey;
+            }
+            .box4 .text2{
+                font-size: 43px;
+                font-weight: 900;
+                color: black;
+            }
+            .box4 .text3{
+                font-size: 16px;
+                font-weight: 600;
+                color: rgb(161, 161, 161);
+                margin-top: 25px;
+            }
+            .box5{
+                width: 100%;
+                height: 550px;
+                background-color: rgb(241, 241, 241);
+                margin: 0 auto;
+            }
+            .box6{
+                width: 70%;
+                height: 550px;
+                margin: 0 auto;
+            }
+            .box6 .sub-box2{
+                width: 26%;
+                height: 400px;
+                float: left;
+                text-align: left;
+                margin-top: 70px;
+                margin-left: 5.5%;
+            }
+            .box6 .sub-box2 img{
+                width: 50px;
+                height: 55px;
+            }
+            .box6 .sub-box2 hr{
+                border: 3px solid rgb(71, 71, 71);
+            }
+            .box6 .sub-box2 .text1{
+                padding-top: 10px;
+                font-size: 17px;
+                font-weight: 600;
+                color: black;
+            }
+            .box6 .sub-box2 h1{
+                font-size: 45px;
+                font-weight: 900;
+                color: black;
+            }
+            .box6 .sub-box2 .text2{
+                font-size: 17px;
+                font-weight: 600;
+                color: rgb(161, 161, 161);
+                margin-top: 15px;
+            }
+            .box6 .sub-box2 .text3{
+                font-size: 17px;
+                font-weight: 600;
+                color: rgb(161, 161, 161);
+                margin-top: 30px;
+            }
+
+            
+
+		</style>
+        <script></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+	</head>
+    <body>
+        <nav class="navbar fixed-top navbar-light navbar-expand-lg ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="./image/LOGO.png" class="LOGO"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">아무거나</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        자격증 추천
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">전공별</a></li>
+                        <li><a class="dropdown-item" href="#">기업별</a></li>
+                        <li><a class="dropdown-item" href="#">나이별</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">고객지원</a>
+                    </li>
+                                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">고객지원</a>
+                    </li>
+                  </ul>
+                </div>
+                <a class="navbar-brand" href="#"><img src="./image/user.png" class="USER"> 김다인님</a>
+              </div>
+        </nav>
+        <div class="box">
+            <div class="box1">
+                <p class="text1">추천시스템으로 보는 자격증</p>
+                <p class="text2">어떤 자격증을 따야할지, 어떤 공부를 할지, 어떤 일을 해야할지, <br>고민하는 당신에게  맞는 정보를 추천해드립니다</p>
+                <form class="d-flex" style="text-align:center;">
+                    <input class="form-control me-2" type="search" placeholder="검색어를 입력하세요" aria-label="Search" style="width: 70%;">
+                    <button  type="submit" class="search-btn"><img src="./image/search_icon.png" class="search_icon"></a></button>
+                </form>
+            </div>
+            <div class="box2">
+                <img src="./image/bigdata_icon.png" class="bigdata_icon">
+            </div>
+        </div>
+        <div class="box3">
+            <p>22세 김다인님 맞춤추천</p>
+            <div class="sub-box">
+                <p>20대 여성이 많이 취득한 자격증</p>
+                <table>
+                    <tr>
+                        <th>순위</th>
+                        <th>자격증</th>
+                        <th>인원</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>컴퓨터활용능력2급</td>
+                        <td>37,269</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>컴퓨터활용능력1급</td>
+                        <td>26,925</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>워드프로세서</td>
+                        <td>8,473</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>미용사(네일)</td>
+                        <td>4,052</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>사회조사분석사2급</td>
+                        <td>3,713</td>
+                    </tr>
+                </table>
+                <!-- <ol class="circle"> 
+                    <li>item</li> 
+                    <li>item</li> 
+                    <li>item</li> 
+                    <li>item</li> 
+                </ol> -->
+            </div>
+            <div class="sub-box">
+                <p>IT계열 인기 자격증(구인공고)</p>
+                <table>
+                    <tr class="tr1">
+                        <th>순위</th>
+                        <th>자격증</th>
+                        <th>구인 수</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>정보처리기사</td>
+                        <td>1,007</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>직업상담사2급</td>
+                        <td>171</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>정보처리산업기사</td>
+                        <td>138</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>정보통신기사</td>
+                        <td>96</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>정보처리기능사</td>
+                        <td>75</tr>
+                    </tr>
+                </table>
+            </div>
+            <div class="sub-box">
+                <p>고연봉 자격증</p>
+                <table>
+                    <tr class="tr2">
+                        <th>순위</th>
+                        <th>자격증</th>
+                        <th>월급(만원)</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>토질 및 기초기술사</td>
+                        <td>427</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>수질관리기술사</td>
+                        <td>386</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>건축구조기술사</td>
+                        <td>364</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>건설안전기술사</td>
+                        <td>349</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>철근기능사</td>
+                        <td>344</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="sub-box">
+                <p>IT계열 유용한 자격증 5가지</p>
+                <table>
+                    <tr class="tr3">
+                        <th>순서</th>
+                        <th>자격증</th>
+                        <th>주관처</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>전산회계운용사</td>
+                        <td>대한상공회의소</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>정보보안기사</td>
+                        <td>한국인터넷지능원</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>OCP</td>
+                        <td>오라클</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>OCJP/OCWCD</td>
+                        <td>오라클</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>CCNA/CCNP</td>
+                        <td>시스코</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="box4">
+            <p class="text1">당신을 위한 추천시스템</p>
+            <h1 class="text2">고객 전용 맞춤형 추천 서비스</h1>
+            <p class="text3">넷플릭스와 유튜브 등에서 사용되는 추천시스템을 기반으로 하여, AMGN만의 맞춤시스템을 구현하여<br>여러분의 관심과 분야에 맞는 자격증과 시험을 추천해드립니다.</bt></p>
+        </div>
+        <div class="box5">
+            <div class="box6">
+                <div class="sub-box2">
+                    <img src="./image/box5_hand.png">
+                    <hr>
+                    <p class="text1">후원기관</p>
+                    <h1>17</h1>
+                    <p class="text2">AMGN를 지원해주는 후원기관 입니다<br>많은 도움 부탁드립니다</p>
+                    <p class="text3">여러분에게 더 정확한 시스템을 제공하기 위해 AMGN를 도와주시는 분들입니다.<br>많은 관심 부탁드립니다.</p>
+                </div>
+                <div class="sub-box2">
+                    <img src="./image/box5_book.png">
+                    <hr>
+                    <p class="text1">이용자 만족도</p>
+                    <h1>75%</h1>
+                    <p class="text2">AMGN 이용자의 만족도 입니다.<br>설문조사를 기반으로 분석합니다.</p>
+                    <p class="text3">저희 AMGN는 여러분의 최상의 만족도를 얻기위해 최선을 다해 노력하고 있습니다. 최고의 시스템을 제공하기 위해 노력하겠습니다.</p>
+                </div>
+                <div class="sub-box2">
+                    <img src="./image/box5_bigdata.png">
+                    <hr>
+                    <p class="text1">시스템 정확도</p>
+                    <h1>98%</h1>
+                    <p class="text2">사용자 기반 추천 시스템의 정확도입니다.<br>여러분에게 맞는 정보를 제공합니다.</p>
+                    <p class="text3">각 사용자의 데이터를 기반으로 추천해드립니다. 정확한 정보를 제공하도록 언제나 노력하겠습니다.</p>
+                </div>
+            </div>
+        </div>
+	</body>
+</html>
+
+

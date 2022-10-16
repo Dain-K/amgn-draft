@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>로그인</title>
+        <style>
+            .login-title{
+                padding-top: 90px;
+                font-weight: 800;
+                font-size: 23px;
+            }
+            .m1{
+                background:#252A38; 
+                width: 42%; 
+                height: 750px;
+                margin-left: 50%;
+                margin-top: 3%;
+                border-radius: 10px;
+            }
+            .m2{
+                background:white;
+                box-shadow:  0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0,0,0,0.22);
+                border-radius: 10px;
+                position:relative; 
+                top:-720px; 
+                left: -38%; 
+                width: 40%; 
+                height: 690px;
+                margin-left: 50%;
+                text-align: center;
+                align-items: center;
+            } 
+            .input-table{
+                margin: 0 auto;
+                width: 67%;
+                text-align: center;
+                align-items: center;
+                margin-top: 25px;
+                border-radius: 10px;
+                border-left: 5px solid #252A38;
+                box-shadow:  2px 5px 20px 2px rgba(200, 205, 211, 0.7);
+            }
+            .input-table tr{
+                height: 58px;
+            }
+            .input-table td:nth-child(1){
+                width: 12%;
+                font-size: 14px;
+                font-weight: 800;
+            }
+            .input-table td:nth-child(2){
+                width: 55%;
+            }
+            .input-table input{
+                height: 34px;
+                width: 90%;
+                background-color: white;
+                border: none;
+            }
+            .box2{
+                width: 67%;
+                margin: 0 auto;
+                text-align: left;
+                align-items: left;
+                margin-top: 50px;
+                font-weight: 800;
+            }
+            .check{
+                width: 20px;
+                background:#252A38; 
+            }
+            .login-btn{
+                width: 67%;
+                height: 60px;
+                margin-top: 30px;
+                border-radius: 5px;
+                border: none;
+                font-size: 16px;
+                font-weight: 800;
+                color: white;
+                background-color: #252A38;
+            }
+            .login-btn:hover{
+                cursor: pointer;
+                background-color: #363c4b;
+            }
+            .find-table{
+                margin: 0 auto;
+                margin-top: 30px;
+                text-align: center;
+            }
+            .find-table td{
+                width: 120px;
+                color: grey;
+                font-size: 16px;
+            }
+            .find-table td:nth-child(1){
+                border-right: 2px solid grey;
+            }
+
+		</style>
+        <script></script>
+	</head>
+    <body>
+            <div class="m1"></div>
+            <div class="m2">
+                <div class="login-title">AMGN</div>
+                <table class="input-table" style="margin-top: 45px;;">
+                    <tr>
+                        <td>
+                            이메일
+                        </td>
+                        <td>
+                            <div style="border-left: 2px solid rgb(204, 204, 204);"><input type="text" placeholder="이메일을 입력해주세요" required></div>
+                        </td>
+                    </tr>
+                </table>
+                <table class="input-table">
+                    <tr>
+                        <td>
+                            비밀번호
+                        </td>
+                        <td>
+                            <div style="border-left: 2px solid rgb(204, 204, 204);"><input type="password" placeholder="비밀번호를 입력해주세요" required></div>
+                        </td>
+                    </tr>
+                </table>
+                <div class="box2">
+                    <input type="checkbox" class="check" ><span>로그인 상태 유지</span>
+                </div>
+                <input class="login-btn" type="button" value="로그인" onClick="location.href='greeting.html'">
+                <table class="find-table">
+                    <tr>
+                        <td>아이디찾기</td>
+                        <td>비밀번호찾기</td>
+                    </tr>
+                </table>
+            </div> 
+
+	</body>
+</html>
+
+
