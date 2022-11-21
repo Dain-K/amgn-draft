@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AMGN</title>
+    <style>
+      a {
+        text-decoration: none;
+        cursor: pointer;
+      }
+      div {
+        display: block;
+      }
+      .logo {
+        background: url("./image/logo_moon.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .box {
+        margin: 0 auto;
+        width: 450px;
+        background-color: #fff;
+        border: 1px solid #dadce0;
+        border-radius: 8px;
+        display: block;
+        margin-top: 80px;
+      }
+      .box .container {
+        height: auto;
+        padding: 48px 40px 36px;
+        text-align: center;
+      }
+      .header {
+        padding: 30px;
+      }
+      .header .logo {
+        display: inline-block;
+        width: 200px;
+        height: 50px;
+      }
+      .blind {
+        overflow: hidden;
+        width: 1px;
+        height: 1px;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="container">
+        <div class="header">
+          <a href="/" class="logo"> <span class="blind">AMGN</span> </a>
+        </div>
+        <div class="id_pw_wrap">
+          <input type="text" />
+          <input type="password" />
+        </div>
+        <div>
+          <button><span>로그인</span></button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
