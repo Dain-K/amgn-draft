@@ -29,7 +29,7 @@
       }
       .box .container {
         height: auto;
-        padding: 48px 40px 36px;
+        padding: 48px 70px 36px;
         text-align: center;
       }
       .header {
@@ -46,6 +46,24 @@
         height: 1px;
         position: absolute;
       }
+      .id_pw_warp .input_row {
+        display: table;
+        width: 100%;
+        padding: 14px 17px 13px;
+      }
+      .input_row {
+        position: relative;
+        height: 100%;
+        border: 1px solid #dadada;
+        text-align: left;
+        margin-bottom: 1rem;
+      }
+      input:focus {
+        outline: 0 none;
+      }
+      .id_pw_warp .active {
+        transform: translateY(100%) scale(1.17);
+      }
     </style>
   </head>
   <body>
@@ -55,8 +73,15 @@
           <a href="/" class="logo"> <span class="blind">AMGN</span> </a>
         </div>
         <div class="id_pw_wrap">
-          <input type="text" />
-          <input type="password" />
+          <dt class="id-title" id="id-title">
+            <label for="user-email">이메일</label>
+          </dt>
+          <div class="input_row">
+            <input type="text" id="id" />
+          </div>
+          <div class="input_row">
+            <input type="password" />
+          </div>
         </div>
         <div>
           <button><span>로그인</span></button>
