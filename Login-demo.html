@@ -5,7 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AMGN</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
     <style>
+      body {
+        font-family: "Spoqa Han Sans Neo", "Spoqa Han Sans", "SpoqaHanSans",
+          system-ui, sans-serif;
+      }
       a {
         text-decoration: none;
         cursor: pointer;
@@ -58,11 +63,21 @@
         text-align: left;
         margin-bottom: 1rem;
       }
+      .input_row input {
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+        height: 30px;
+        border: none;
+        background-color: none;
+      }
       input:focus {
         outline: 0 none;
       }
-      .id_pw_warp .active {
-        transform: translateY(100%) scale(1.17);
+      .id_pw_wrap .id-title {
+        color: #000;
+        font-weight: 600;
+        text-align: left;
       }
     </style>
   </head>
@@ -73,14 +88,18 @@
           <a href="/" class="logo"> <span class="blind">AMGN</span> </a>
         </div>
         <div class="id_pw_wrap">
-          <dt class="id-title" id="id-title">
-            <label for="user-email">이메일</label>
+          <dt class="id-title active" id="id-title">
+            <label for="user-email ">이메일</label>
           </dt>
           <div class="input_row">
             <input type="text" id="id" />
           </div>
+
+          <dt class="id-title active" id="pw-title">
+            <label for="user-email ">비밀번호</label>
+          </dt>
           <div class="input_row">
-            <input type="password" />
+            <input type="password" id="pw" />
           </div>
         </div>
         <div>
