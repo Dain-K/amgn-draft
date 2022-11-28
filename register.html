@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>아무거나</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        color: inherit;
+        font: inherit;
+      }
+      body {
+        font-family: "Noto Sans KR", sans-serif;
+      }
+      div {
+        display: block;
+      }
+      button {
+        cursor: pointer;
+      }
+      ol,
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        cursor: pointer;
+      }
+      select {
+        font-family: "Noto Sansf KR", sans-serif;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+
+        color: #444;
+        background-color: #fff;
+
+        padding: 0.6em 1.4em 0.5em 0.8em;
+        margin: 0;
+
+        border: 1px solid #aaa;
+        border-radius: 0.5em;
+        box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
+      }
+      select:hover {
+        border-color: #888;
+      }
+
+      select:focus {
+        border-color: #aaa;
+        box-shadow: 0 0 1px 3px rgba(59, 153, 252, 0.7);
+        box-shadow: 0 0 0 3px -moz-mac-focusring;
+        color: #222;
+        outline: none;
+      }
+      input:focus {
+        border-color: #aaa;
+        box-shadow: 0 0 1px 3px rgba(59, 153, 252, 0.7);
+        box-shadow: 0 0 0 3px -moz-mac-focusring;
+        color: #222;
+        outline: none;
+      }
+      .nav {
+        position: sticky;
+        z-index: 2;
+        top: 0;
+        display: flex;
+        width: 100%;
+        height: 4.75rem;
+        align-items: center;
+        justify-content: center;
+        background-color: #252a38;
+        font-weight: 0.875rem;
+        /* border: 1px solid pink; */
+      }
+      .nav .logo-box {
+        display: flex;
+        height: 4.75rem;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 2rem;
+      }
+      .nav .logo-box a {
+        display: flex;
+        align-items: center;
+      }
+      .nav .logo-box img {
+        width: 13.5rem;
+        height: auto;
+      }
+      .cover {
+        display: flex;
+        width: 100%;
+        min-height: 150vh;
+        background: #252a38;
+        justify-content: center;
+      }
+      .cover .main {
+        display: flex;
+        background: #252a38;
+        z-index: 1;
+      }
+
+      .cover .main .content {
+        width: 500px;
+        height: 100%;
+        padding: 0 1.25rem;
+      }
+      .cover .main .content .box {
+        position: relative;
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+      }
+      .cover .main .content .box.right {
+        align-items: flex-end;
+        /* border: 1px solid blue; */
+      }
+      .cover .main .content .box .id-cover {
+        width: 100%;
+        margin-top: 3rem;
+        background-color: #fff;
+        border-radius: 1rem;
+      }
+      .id-box {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+      }
+      .id-box .login-title {
+        width: 100%;
+        padding: 40px 0 5px 0;
+        font-weight: 900;
+        font-size: 1.2rem;
+        text-align: center;
+      }
+      .element {
+        width: 100%;
+        height: 100%;
+        padding: 1.875rem 2rem;
+        border-radius: 0.9375rem;
+        background: #fff;
+      }
+      .element .title {
+        width: 100%;
+        margin-bottom: 0.6rem;
+      }
+      .element .title h2 {
+        font-weight: 700;
+        font-size: 1rem;
+      }
+      .element .email-input {
+        position: relative;
+        width: 100%;
+        padding-bottom: 35px;
+      }
+      .element .email-input .input-box {
+        width: 100%;
+        height: 2.875rem;
+        padding: 0.5rem 0.875rem 0.5rem 0.875rem;
+        border: 1px solid #d2d2d2;
+        border-radius: 0.3rem;
+      }
+      .element .email-input .input-box.check {
+        margin-top: 10px;
+      }
+
+      .element .email-input .radioBox {
+        display: block;
+        width: 100%;
+        height: 2.875rem;
+        padding: 0.5rem 0.875rem 0.5rem 0.5rem;
+        border: 1px solid #d2d2d2;
+        border-radius: 0.3rem;
+      }
+
+      .element .btn {
+        width: 100%;
+        height: 2.8rem;
+        margin: 18px 0 1px 0;
+        border: none;
+        border-radius: 0.3rem;
+        font-weight: 700;
+        color: #fff;
+        background-color: #252a38;
+      }
+    </style>
+    <script>
+      function oninputPhone(target) {
+        target.value = target.value
+          .replace(/[^0-9]/g, "")
+          .replace(
+            /(^02.{0}|^01.{1}|[0-9]{3,4})([0-9]{3,4})([0-9]{4})/g,
+            "$1-$2-$3"
+          );
+      }
+    </script>
+  </head>
+  <body>
+    <div class="nav">
+      <div class="logo-box">
+        <a href="/"><img src="./image/logo_moon_white.png" alt="amgn" /></a>
+      </div>
+    </div>
+    <div class="cover">
+      <div class="main">
+        <div class="content">
+          <div class="box right">
+            <div class="id-cover">
+              <div class="id-box">
+                <div class="login-title"><h2>회원가입</h2></div>
+                <div class="element">
+                  <div class="title"><h2>이름</h2></div>
+                  <div class="email-input">
+                    <input
+                      type="text"
+                      class="input-box"
+                      placeholder="이름을 입력해주세요"
+                    />
+                  </div>
+                  <div class="title">
+                    <h2>이메일</h2>
+                  </div>
+                  <div class="email-input">
+                    <input
+                      name="email"
+                      class="input-box"
+                      type="email"
+                      placeholder="이메일을 입력해주세요"
+                    />
+                  </div>
+                  <div class="title">
+                    <h2>비밀번호</h2>
+                  </div>
+                  <div class="email-input">
+                    <input
+                      name="password"
+                      class="input-box"
+                      type="password"
+                      id="password"
+                      placeholder="영문자, 숫자, 특수문자 포함 최소 8-20자"
+                    />
+                    <input
+                      name="password"
+                      class="input-box check"
+                      type="password"
+                      placeholder="비밀번호를 확인해주세요"
+                    />
+                  </div>
+                  <div class="title">
+                    <h2>생년월일</h2>
+                  </div>
+                  <div class="email-input">
+                    <input
+                      type="date"
+                      data-placeholder="날짜 선택"
+                      required
+                      id="birth"
+                      aria-required="true"
+                      class="input-box"
+                    />
+                  </div>
+                  <div class="title">
+                    <h2>전화번호</h2>
+                  </div>
+                  <div class="email-input">
+                    <input
+                      type="tel"
+                      name="tel"
+                      id="telInput"
+                      required
+                      maxlength="13"
+                      class="input-box"
+                      placeholder="010-1234-5678"
+                      oninput="oninputPhone(this)"
+                    />
+                  </div>
+                  <div class="title">
+                    <h2>성별</h2>
+                  </div>
+                  <div class="email-input">
+                    <select name="sex" id="sex" class="radioBox">
+                      <option disabled selected>성별을 선택하세요</option>
+                      <option value="male">남자</option>
+                      <option value="female">여자</option>
+                      <option value="none">선택안함</option>
+                    </select>
+                  </div>
+                  <div class="title">
+                    <h2>거주지역</h2>
+                  </div>
+                  <div class="email-input">
+                    <select name="location" id="location" class="radioBox">
+                      <option disabled selected>거주지역을 선택하세요</option>
+                      <option value="02">서울</option>
+                      <option value="031">경기</option>
+                      <option value="032">인천</option>
+                      <option value="033">강원</option>
+                      <option value="041">충남</option>
+                      <option value="042">대전</option>
+                      <option value="043">충북</option>
+                      <option value="051">부산</option>
+                      <option value="052">울산</option>
+                      <option value="053">대구</option>
+                      <option value="054">경북</option>
+                      <option value="054">경북</option>
+                      <option value="055">경남</option>
+                      <option value="061">전남</option>
+                      <option value="062">광주</option>
+                      <option value="063">전북</option>
+                      <option value="064">제주</option>
+                    </select>
+                  </div>
+                  <div class="title">
+                    <h2>학력</h2>
+                  </div>
+                  <div class="email-input">
+                    <select name="school" id="school" class="radioBox">
+                      <option value="high_gradu">고등학교 졸업</option>
+                      <option value="univ_ing">대학교 재학중</option>
+                      <option value="univ_gradu">대학교 졸업예정</option>
+                    </select>
+                  </div>
+                  <input type="text" id="selboxDirect" name="selboxDirect" />
+                  <script>
+                    $(function () {
+                      $("#selboxDirect").hide();
+                      $("#school").change(function () {
+                        // 대학교를 선택할 경우 나타남
+                        if (
+                          $("#shool").val() == "univ_ing" ||
+                          $("#shool").val() == "univ_gradu"
+                        ) {
+                          $("#selboxDirect").show();
+                        } else {
+                          $("#selboxDirect").hide();
+                        }
+                      });
+                    });
+                  </script>
+                  <div class="title">
+                    <h2>MBTI</h2>
+                  </div>
+                  <div class="email-input">
+                    <select name="mbti" id="mbti" class="radioBox">
+                      <option disabled selected>MBTI를 선택하세요</option>
+                      <option value="ISTJ">ISTJ</option>
+                      <option value="ISFJ">ISFJ</option>
+                      <option value="INFJ">INFJ</option>
+                      <option value="INTJ">INTJ</option>
+                      <option value="ISTP">ISTP</option>
+                      <option value="ISFP">ISFP</option>
+                      <option value="INFP">INFP</option>
+                      <option value="INTP">INTP</option>
+                      <option value="ESTP">ESTP</option>
+                      <option value="ESFP">ESFP</option>
+                      <option value="ENFP">ENFP</option>
+                      <option value="ENTP">ENTP</option>
+                      <option value="ESTJ">ESTJ</option>
+                      <option value="ESFJ">ESFJ</option>
+                      <option value="ENFJ">ENFJ</option>
+                      <option value="ENTJ">ENTJ</option>
+                      <option value="none">선택안함</option>
+                    </select>
+                  </div>
+                  <button class="btn"><span>다음</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
