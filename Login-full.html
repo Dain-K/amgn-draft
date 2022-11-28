@@ -109,6 +109,16 @@
         height: auto;
         margin-top: 3rem;
         transform: scaleX(-1);
+        animation: up-down 1.2s infinite ease-in-out alternate;
+      }
+      /* 위 아래로 움직이기 */
+      @keyframes up-down {
+        from {
+          transform: translatey(0px);
+        }
+        to {
+          transform: translatey(-10px);
+        }
       }
       .cover .main .content .box.right {
         align-items: flex-end;
