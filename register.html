@@ -160,11 +160,25 @@
         width: 100%;
         padding-bottom: 35px;
       }
+      .element .email-input .emailError {
+        padding-top: 3px;
+      }
+      .element .email-input .emailError p {
+        font-size: 0.8rem;
+        color: #ff0000;
+      }
       .element .email-input .input-box {
         width: 100%;
         height: 2.875rem;
         padding: 0.5rem 0.875rem 0.5rem 0.875rem;
         border: 1px solid #d2d2d2;
+        border-radius: 0.3rem;
+      }
+      .element .email-input .input-box.active {
+        width: 100%;
+        height: 2.875rem;
+        padding: 0.5rem 0.875rem 0.5rem 0.875rem;
+        border: 1.5px solid #ff0000;
         border-radius: 0.3rem;
       }
       .element .email-input .input-box.check {
@@ -200,6 +214,32 @@
             "$1-$2-$3"
           );
       }
+
+      $(function () {
+        // 이메일 형식 맞는지 판단
+        $("#emailError").hide();
+        $("#email").change(function () {
+          const str = $("#email").val();
+          const className = document.getElementById("email").classList;
+          if (str.includes("@") && str.includes(".com")) {
+            className.remove("active");
+            $("#emailError").hide();
+          } else {
+            className.add("active");
+            $("#emailError").show();
+          }
+        });
+
+        $("#selboxDirect").hide();
+        $("#school").change(function () {
+          // 대학교를 선택할 경우 나타남
+          if ($(this).find("option:selected").val() == "univ") {
+            $("#selboxDirect").show();
+          } else {
+            $("#selboxDirect").hide();
+          }
+        });
+      });
     </script>
   </head>
   <body>
@@ -229,11 +269,15 @@
                   </div>
                   <div class="email-input">
                     <input
+                      id="email"
                       name="email"
                       class="input-box"
                       type="email"
                       placeholder="이메일을 입력해주세요"
                     />
+                    <div class="emailError" name="emailError" id="emailError">
+                      <p>이메일 형식이 맞지 않습니다.</p>
+                    </div>
                   </div>
                   <div class="title">
                     <h2>비밀번호</h2>
@@ -360,19 +404,6 @@
                       />
                     </div>
                   </div>
-                  <script>
-                    $(function () {
-                      $("#selboxDirect").hide();
-                      $("#school").change(function () {
-                        // 대학교를 선택할 경우 나타남
-                        if ($(this).find("option:selected").val() == "univ") {
-                          $("#selboxDirect").show();
-                        } else {
-                          $("#selboxDirect").hide();
-                        }
-                      });
-                    });
-                  </script>
                   <div class="title">
                     <h2>MBTI</h2>
                   </div>
