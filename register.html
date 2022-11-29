@@ -322,21 +322,50 @@
                   </div>
                   <div class="email-input">
                     <select name="school" id="school" class="radioBox">
-                      <option value="high_gradu">고등학교 졸업</option>
-                      <option value="univ_ing">대학교 재학중</option>
-                      <option value="univ_gradu">대학교 졸업예정</option>
+                      <option disabled selected>최종학력을 선택하세요</option>
+                      <option value="high_gradu">고등학교</option>
+                      <option value="univ">대학교</option>
                     </select>
                   </div>
-                  <input type="text" id="selboxDirect" name="selboxDirect" />
+                  <div id="selboxDirect" name="selboxDirect">
+                    <div class="title">
+                      <h2>상태</h2>
+                    </div>
+                    <div class="email-input">
+                      <select class="radioBox">
+                        <option disabled selected>상태를 선택하세요</option>
+                        <option value="high_gradu">재학중</option>
+                        <option value="univ">졸업예정</option>
+                        <option value="univ">졸업</option>
+                      </select>
+                    </div>
+                    <div class="title">
+                      <h2>대학교</h2>
+                    </div>
+                    <div class="email-input">
+                      <input
+                        type="text"
+                        class="input-box"
+                        placeholder="영남대학교"
+                      />
+                    </div>
+                    <div class="title">
+                      <h2>학과</h2>
+                    </div>
+                    <div class="email-input">
+                      <input
+                        type="text"
+                        class="input-box"
+                        placeholder="정보통신공학과"
+                      />
+                    </div>
+                  </div>
                   <script>
                     $(function () {
                       $("#selboxDirect").hide();
                       $("#school").change(function () {
                         // 대학교를 선택할 경우 나타남
-                        if (
-                          $("#shool").val() == "univ_ing" ||
-                          $("#shool").val() == "univ_gradu"
-                        ) {
+                        if ($(this).find("option:selected").val() == "univ") {
                           $("#selboxDirect").show();
                         } else {
                           $("#selboxDirect").hide();
