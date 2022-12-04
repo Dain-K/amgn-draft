@@ -42,6 +42,7 @@
         background-color: #fff;
         font-weight: 0.875rem;
         /* border: 1px solid pink; */
+        box-shadow: 2px 5px 20px 2px rgb(243 243 243 / 64%);
       }
       .nav .logo-box {
         display: flex;
@@ -58,25 +59,94 @@
         width: 13.5rem;
         height: auto;
       }
+
+      .headerBox {
+        display: flex;
+        width: 100%;
+        min-height: 45vh;
+        background-color: #fff;
+        justify-content: center;
+      }
+      .headerBox .mainBox {
+        display: flex;
+        background-color: #fff;
+        z-index: 1;
+      }
+      .headerBox .mainBox .content {
+        display: grid;
+        width: 1200px;
+        height: 100%;
+        padding: 0 1.25rem;
+        grid-template-columns: auto 468px;
+      }
+      .headerBox .mainBox .content .box {
+        position: relative;
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+      }
+      .headerBox .mainBox .content .box.left {
+        align-items: flex-start;
+      }
+      .headerBox .mainBox .content .box.left .text h2 {
+        color: #000;
+        font-weight: 900;
+        font-size: 1.65rem;
+        line-height: 2.5rem;
+        padding: 180px 100px 180px 60px;
+      }
+      .headerBox .mainBox .content .box.right {
+        align-items: flex-end;
+      }
+      .headerBox .mainBox .content .box.right .imgBigdata {
+        position: absolute;
+        top: 45%;
+        margin: -150px 0 0 0;
+      }
+      .headerBox .mainBox .content .box.right .imgBigdata img {
+        width: 500px;
+        height: auto;
+      }
+      .blank {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 1vh;
+        background-color: rgb(230, 230, 230);
+      }
+
       .cover {
         display: flex;
         width: 100%;
         min-height: 100vh;
-        background: #fff;
+        background: rgb(255, 255, 255);
         justify-content: center;
       }
       .cover .main {
         display: block;
-        background: #fff;
+        background: rgb(255, 255, 255);
         z-index: 1;
       }
-      .cover .box {
-        width: 100%;
-        height: 5rem;
-        background-color: aqua;
-      }
-      .cover .main .title {
+
+      .cover .main .container {
         width: 1200px;
+      }
+      .cover .main .container .questionBox {
+        width: 100%;
+        background-color: #fff;
+        padding: 15px 25px;
+        border: 5px solid rgb(134, 134, 134);
+        border-radius: 10px;
+        margin-top: 20px;
+      }
+      .cover .main .container .questionBox h2 {
+        font-size: 1.15rem;
+        font-weight: 700;
+      }
+      .cover .main .container .questionBox span {
+        font-size: 1.35rem;
+        font-weight: 800;
+        color: #37b198;
       }
     </style>
   </head>
@@ -92,15 +162,31 @@
         <a href="/"><img src="images/logo_moon.png" alt="amgn" /></a>
       </div>
     </div>
+    <div class="headerBox">
+      <div class="mainBox">
+        <div class="content">
+          <div class="box left">
+            <div class="text">
+              <h2>
+                당신에게 딱 맞는 자격증 추천 가이드! <br />맞춤형 정보를
+                제공합니다.
+              </h2>
+            </div>
+          </div>
+          <div class="box right">
+            <div class="imgBigdata">
+              <img src="images/bigdata_bulb.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="blank"></div>
     <div class="cover">
       <div class="main">
-        <div class="box"></div>
-        <div class="title">
-          <div class="username">
-            <h2>김다인 님의 추천 시스템 구축!</h2>
-          </div>
-          <div class="question">
-            <h2>받고 싶은 연봉을 선택해주세요</h2>
+        <div class="container">
+          <div class="questionBox">
+            <h2><span>STEP 2.</span> 받고싶은 최저 연봉을 선택하세요</h2>
           </div>
         </div>
       </div>
