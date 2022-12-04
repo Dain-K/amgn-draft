@@ -5,225 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>아무거나</title>
-    <style>
-      * {
-        box-sizing: border-box;
-        padding: 0;
-        margin: 0;
-        color: inherit;
-        font: inherit;
-      }
-      body {
-        font-family: "Noto Sans KR", sans-serif;
-      }
-      div {
-        display: block;
-      }
-      button {
-        cursor: pointer;
-      }
-      ol,
-      ul {
-        list-style: none;
-      }
-      a {
-        text-decoration: none;
-        cursor: pointer;
-      }
-      .nav {
-        position: sticky;
-        z-index: 2;
-        top: 0;
-        display: flex;
-        width: 100%;
-        height: 4.75rem;
-        align-items: center;
-        justify-content: center;
-        background-color: #252a38;
-        font-weight: 0.875rem;
-        /* border: 1px solid pink; */
-      }
-      .nav .logo-box {
-        display: flex;
-        height: 4.75rem;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 2rem;
-      }
-      .nav .logo-box a {
-        display: flex;
-        align-items: center;
-      }
-      .nav .logo-box img {
-        width: 13.5rem;
-        height: auto;
-      }
-      .cover {
-        display: flex;
-        width: 100%;
-        min-height: 100vh;
-        background: #252a38;
-        justify-content: center;
-      }
-      .cover .main {
-        display: flex;
-        background: #252a38;
-        z-index: 1;
-      }
-
-      .cover .main .content {
-        display: grid;
-        width: 1200px;
-        height: 100%;
-        /* border: 1px solid yellow; */
-        padding: 0 1.25rem;
-        grid-template-columns: auto 468px;
-      }
-      .cover .main .content .box {
-        position: relative;
-        display: flex;
-        height: 100%;
-        flex-direction: column;
-      }
-      .cover .main .content .box.left {
-        align-items: flex-start;
-        /* border: 1px solid red; */
-      }
-      .cover .main .content .box.left .text:nth-child(1) {
-        margin-top: 6.5rem;
-        margin-bottom: 0.5rem;
-      }
-      .cover .main .content .box.left .text:nth-child(1) h2 {
-        color: #c7c7c7;
-        font-weight: 500;
-        font-size: 1rem;
-      }
-      .cover .main .content .box.left .text:nth-child(2) h2 {
-        color: white;
-        font-weight: 800;
-        font-size: 1.55rem;
-        line-height: 2.5rem;
-      }
-      .cover .main .content .box.left .moon img {
-        width: 450px;
-        height: auto;
-        margin-top: 3rem;
-        transform: scaleX(-1);
-        animation: up-down 1.2s infinite ease-in-out alternate;
-      }
-      /* 위 아래로 움직이기 */
-      @keyframes up-down {
-        from {
-          transform: translatey(0px);
-        }
-        to {
-          transform: translatey(-10px);
-        }
-      }
-      .cover .main .content .box.right {
-        align-items: flex-end;
-        /* border: 1px solid blue; */
-      }
-      .cover .main .content .box .id-cover {
-        width: 100%;
-        margin-top: 7rem;
-        background-color: #fff;
-        border-radius: 1rem;
-      }
-      .id-box {
-        display: flex;
-        height: 100%;
-        flex-direction: column;
-        align-items: center;
-      }
-      .id-box .login-title {
-        width: 100%;
-        padding: 40px 0 5px 0;
-        font-weight: 900;
-        font-size: 1.2rem;
-        text-align: center;
-      }
-      .element {
-        width: 100%;
-        height: 100%;
-        padding: 1.875rem 2rem;
-        border-radius: 0.9375rem;
-        background: #fff;
-      }
-      .element .title {
-        width: 100%;
-        margin-bottom: 0.6rem;
-      }
-      .element .title h2 {
-        font-weight: 700;
-        font-size: 1rem;
-      }
-      .element .email-input {
-        position: relative;
-        width: 100%;
-        padding-bottom: 30px;
-      }
-      .element .email-input .input-box {
-        width: 100%;
-        height: 2.875rem;
-        padding: 0.5rem 2.5rem 0.5rem 0.875rem;
-        border: 1px solid #d2d2d2;
-        border-radius: 0.3rem;
-      }
-
-      .element .btn {
-        width: 100%;
-        height: 2.8rem;
-        margin: 15px 0 1px 0;
-        border: none;
-        border-radius: 0.3rem;
-        font-weight: 700;
-      }
-      .element .btn.login {
-        color: #fff;
-        background-color: #252a38;
-      }
-      .element .btn.signin {
-        color: black;
-        background-color: #e3e3e3;
-        margin-bottom: 1rem;
-      }
-      .find_box {
-        text-align: right;
-        padding: 8px 0 5px 0;
-      }
-      .find_box li {
-        position: relative;
-        display: inline-block;
-      }
-      .find_box li a:hover {
-        color: #252a38;
-        font-weight: 600;
-      }
-      .find_box li + li {
-        padding-left: 28px;
-      }
-      .find_box li + li::before {
-        content: "";
-        position: absolute;
-        top: 4px;
-        left: 12px;
-        width: 1px;
-        height: 15px;
-        border-radius: 0.5px;
-        background-color: #dadada;
-      }
-      .find_box .find_text {
-        display: inline-block;
-        font-size: 0.9rem;
-        color: #888;
-      }
-    </style>
+    <link rel="stylesheet" href="css/loginForm.css" />
   </head>
   <body>
     <div class="nav">
       <div class="logo-box">
-        <a href="/"><img src="./image/logo_moon_white.png" alt="amgn" /></a>
+        <a href="/"><img src="images/logo_moon_white.png" alt="amgn" /></a>
       </div>
     </div>
     <div class="cover">
@@ -238,38 +25,47 @@
               </h2>
             </div>
             <div class="moon">
-              <img src="./image/bigdata3.png" alt="" />
+              <img src="images/bigdata3.png" alt="" />
             </div>
           </div>
           <div class="box right">
             <div class="id-cover">
               <div class="id-box">
                 <div class="login-title"><h2>로그인</h2></div>
+
                 <div class="element">
-                  <div class="title email">
-                    <h2>이메일</h2>
-                  </div>
-                  <div class="email-input">
-                    <input
-                      name="email"
-                      class="input-box"
-                      type="email"
-                      placeholder="이메일을 입력해주세요"
-                    />
-                  </div>
-                  <div class="title password">
-                    <h2>비밀번호</h2>
-                  </div>
-                  <div class="email-input">
-                    <input
-                      name="password"
-                      class="input-box"
-                      type="password"
-                      placeholder="비밀번호를 입력해주세요"
-                    />
-                  </div>
-                  <button class="btn login"><span>로그인</span></button>
-                  <button class="btn signin"><span>회원가입</span></button>
+                  <form action="/login" method="post">
+                    <div class="title email">
+                      <h2>이메일</h2>
+                    </div>
+                    <div class="email-input">
+                      <input
+                        name="email"
+                        class="input-box"
+                        type="email"
+                        placeholder="이메일을 입력해주세요"
+                        required
+                      />
+                    </div>
+                    <div class="title password">
+                      <h2>비밀번호</h2>
+                    </div>
+                    <div class="email-input">
+                      <input
+                        name="password"
+                        class="input-box"
+                        type="password"
+                        placeholder="비밀번호를 입력해주세요"
+                        required
+                      />
+                    </div>
+                    <button class="btn login"><span>로그인</span></button>
+                  </form>
+                  <a href="/joinForm"
+                    ><button class="btn signin">
+                      <span>회원가입</span>
+                    </button></a
+                  >
                   <ul class="find_box">
                     <li><a href="/" class="find_text">이메일 찾기</a></li>
                     <li><a href="/" class="find_text">비밀번호 찾기</a></li>
