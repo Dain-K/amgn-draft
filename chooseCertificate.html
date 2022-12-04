@@ -39,7 +39,7 @@
         height: 4.75rem;
         align-items: center;
         justify-content: center;
-        background-color: #252a38;
+        background-color: #fff;
         font-weight: 0.875rem;
         /* border: 1px solid pink; */
       }
@@ -62,33 +62,47 @@
         display: flex;
         width: 100%;
         min-height: 100vh;
-        background: #252a38;
+        background: #fff;
         justify-content: center;
       }
       .cover .main {
-        display: flex;
-        background: #252a38;
+        display: block;
+        background: #fff;
         z-index: 1;
       }
-      .cover .main .content {
-        display: grid;
+      .cover .box {
+        width: 100%;
+        height: 5rem;
+        background-color: aqua;
+      }
+      .cover .main .title {
         width: 1200px;
-        height: 100%;
-        /* border: 1px solid yellow; */
-        padding: 0 1.25rem;
-        grid-template-columns: auto 468px;
       }
     </style>
   </head>
   <body>
+    <!--
+      1. 가고싶은 분야(선택)
+      2. 받고싶은 연봉(선택)
+      3. 시험의 난이도(선택)
+      4. 합격가능성 <- 이건 보여주는 것
+    -->
     <div class="nav">
       <div class="logo-box">
-        <a href="/"><img src="./image/logo_moon_white.png" alt="amgn" /></a>
+        <a href="/"><img src="images/logo_moon.png" alt="amgn" /></a>
       </div>
     </div>
     <div class="cover">
       <div class="main">
-        <div class="content"></div>
+        <div class="box"></div>
+        <div class="title">
+          <div class="username">
+            <h2>김다인 님의 추천 시스템 구축!</h2>
+          </div>
+          <div class="question">
+            <h2>받고 싶은 연봉을 선택해주세요</h2>
+          </div>
+        </div>
       </div>
     </div>
   </body>
