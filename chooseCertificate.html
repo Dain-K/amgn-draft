@@ -5,150 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>아무거나</title>
-    <style>
-      * {
-        box-sizing: border-box;
-        padding: 0;
-        margin: 0;
-        color: inherit;
-        font: inherit;
-      }
-      body {
-        font-family: "Noto Sans KR", sans-serif;
-      }
-      div {
-        display: block;
-      }
-      button {
-        cursor: pointer;
-      }
-      ol,
-      ul {
-        list-style: none;
-      }
-      a {
-        text-decoration: none;
-        cursor: pointer;
-      }
-      .nav {
-        position: sticky;
-        z-index: 2;
-        top: 0;
-        display: flex;
-        width: 100%;
-        height: 4.75rem;
-        align-items: center;
-        justify-content: center;
-        background-color: #fff;
-        font-weight: 0.875rem;
-        /* border: 1px solid pink; */
-        box-shadow: 2px 5px 20px 2px rgb(243 243 243 / 64%);
-      }
-      .nav .logo-box {
-        display: flex;
-        height: 4.75rem;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 2rem;
-      }
-      .nav .logo-box a {
-        display: flex;
-        align-items: center;
-      }
-      .nav .logo-box img {
-        width: 13.5rem;
-        height: auto;
-      }
-
-      .headerBox {
-        display: flex;
-        width: 100%;
-        min-height: 45vh;
-        background-color: #fff;
-        justify-content: center;
-      }
-      .headerBox .mainBox {
-        display: flex;
-        background-color: #fff;
-        z-index: 1;
-      }
-      .headerBox .mainBox .content {
-        display: grid;
-        width: 1200px;
-        height: 100%;
-        padding: 0 1.25rem;
-        grid-template-columns: auto 468px;
-      }
-      .headerBox .mainBox .content .box {
-        position: relative;
-        display: flex;
-        height: 100%;
-        flex-direction: column;
-      }
-      .headerBox .mainBox .content .box.left {
-        align-items: flex-start;
-      }
-      .headerBox .mainBox .content .box.left .text h2 {
-        color: #000;
-        font-weight: 900;
-        font-size: 1.65rem;
-        line-height: 2.5rem;
-        padding: 180px 100px 180px 60px;
-      }
-      .headerBox .mainBox .content .box.right {
-        align-items: flex-end;
-      }
-      .headerBox .mainBox .content .box.right .imgBigdata {
-        position: absolute;
-        top: 45%;
-        margin: -150px 0 0 0;
-      }
-      .headerBox .mainBox .content .box.right .imgBigdata img {
-        width: 500px;
-        height: auto;
-      }
-      .blank {
-        display: block;
-        position: relative;
-        width: 100%;
-        height: 1vh;
-        background-color: rgb(230, 230, 230);
-      }
-
-      .cover {
-        display: flex;
-        width: 100%;
-        min-height: 100vh;
-        background: rgb(255, 255, 255);
-        justify-content: center;
-      }
-      .cover .main {
-        display: block;
-        background: rgb(255, 255, 255);
-        z-index: 1;
-      }
-
-      .cover .main .container {
-        width: 1200px;
-      }
-      .cover .main .container .questionBox {
-        width: 100%;
-        background-color: #fff;
-        padding: 15px 25px;
-        border: 5px solid rgb(134, 134, 134);
-        border-radius: 10px;
-        margin-top: 20px;
-      }
-      .cover .main .container .questionBox h2 {
-        font-size: 1.15rem;
-        font-weight: 700;
-      }
-      .cover .main .container .questionBox span {
-        font-size: 1.35rem;
-        font-weight: 800;
-        color: #37b198;
-      }
-    </style>
+    <link rel="stylesheet" href="css/certificateForm.css" />
   </head>
   <body>
     <!--
@@ -181,13 +38,152 @@
         </div>
       </div>
     </div>
-    <div class="blank"></div>
     <div class="cover">
       <div class="main">
         <div class="container">
-          <div class="questionBox">
-            <h2><span>STEP 2.</span> 받고싶은 최저 연봉을 선택하세요</h2>
-          </div>
+          <form action="">
+            <div class="questionBox col-1">
+              <h2><span>STEP 1.</span> 가고 싶은 분야를 선택하세요</h2>
+            </div>
+            <div class="color">
+              <div class="selectBox">
+                <select name="field" id="field" required>
+                  <option disabled selected>희망 분야를 선택하세요.</option>
+                  <option value="건축">건축</option>
+                  <option value="광해방지">광해방지</option>
+                  <option value="금속재료">금속재료</option>
+                  <option value="금형공작기계">금형공작기계</option>
+                  <option value="기계장비설비">기계장비설비</option>
+                  <option value="기계제작">기계제작</option>
+                  <option value="농업">농업</option>
+                  <option value="도시교통">도시교통</option>
+                  <option value="디자인">디자인</option>
+                  <option value="비파괴검사">비파괴검사</option>
+                  <option value="생산관리">생산관리</option>
+                  <option value="섬유">섬유</option>
+                  <option value="식품">식품</option>
+                  <option value="안전관리">안전관리</option>
+                  <option value="어업">어업</option>
+                  <option value="에너지기상">에너지기상</option>
+                  <option value="용접">용접</option>
+                  <option value="인쇄">인쇄</option>
+                  <option value="임업">임업</option>
+                  <option value="자동차">자동차</option>
+                  <option value="전기">전기</option>
+                  <option value="전자">전자</option>
+                  <option value="정보통신">정보통신</option>
+                  <option value="조경">조경</option>
+                  <option value="조선">조선</option>
+                  <option value="축산">축산</option>
+                  <option value="토목">토목</option>
+                  <option value="항공">항공</option>
+                  <option value="화공">화공</option>
+                  <option value="환경">환경</option>
+                  <option value="없음">없음</option>
+                </select>
+              </div>
+            </div>
+            <div class="questionBox col-2">
+              <h2><span>STEP 2.</span> 받고싶은 연봉을 선택하세요</h2>
+            </div>
+            <div class="color">
+              <div class="selectBox">
+                <select name="money" id="money" required>
+                  <option disabled selected>희망 연봉을 선택하세요.</option>
+                  <option value="2천만원대">2천만원대</option>
+                  <option value="3천초반대">3천초반대</option>
+                  <option value="3천중반대">3천중반대</option>
+                  <option value="3천후반대">2천만원대</option>
+                  <option value="4천초반대">4천초반대</option>
+                  <option value="4천중반대">4천중반대</option>
+                  <option value="4천후반대">4천후반대</option>
+                  <option value="5천초반대">5천초반대</option>
+                  <option value="5천중반대">5천중반대</option>
+                  <option value="5천후반대">5천후반대</option>
+                  <option value="6천초반대">6천초반대</option>
+                  <option value="6천중반대">6천중반대</option>
+                  <option value="없음">없음</option>
+                </select>
+              </div>
+            </div>
+            <div class="questionBox col-3">
+              <h2><span>STEP 3.</span> 시험의 난이도를 선택하세요.</h2>
+            </div>
+            <div class="mb-3">
+              <div
+                class="form_toggle row-vh d-flex flex-row justify-content-between"
+              >
+                <div class="form_radio_btn radio_male">
+                  <input
+                    id="radio-1"
+                    type="radio"
+                    name="testRevel"
+                    value="최하"
+                    checked
+                  />
+                  <label for="radio-1">최하</label>
+                </div>
+
+                <div class="form_radio_btn">
+                  <input
+                    id="radio-2"
+                    type="radio"
+                    name="testRevel"
+                    value="하"
+                  />
+                  <label for="radio-2">하</label>
+                </div>
+                <div class="form_radio_btn">
+                  <input
+                    id="radio-3"
+                    type="radio"
+                    name="testRevel"
+                    value="중하"
+                  />
+                  <label for="radio-3">중하</label>
+                </div>
+                <div class="form_radio_btn">
+                  <input
+                    id="radio-4"
+                    type="radio"
+                    name="testRevel"
+                    value="중"
+                  />
+                  <label for="radio-4">중</label>
+                </div>
+                <div class="form_radio_btn">
+                  <input
+                    id="radio-5"
+                    type="radio"
+                    name="testRevel"
+                    value="중상"
+                  />
+                  <label for="radio-5">중상</label>
+                </div>
+                <div class="form_radio_btn">
+                  <input
+                    id="radio-6"
+                    type="radio"
+                    name="testRevel"
+                    value="상"
+                  />
+                  <label for="radio-6">상</label>
+                </div>
+                <div class="form_radio_btn">
+                  <input
+                    id="radio-7"
+                    type="radio"
+                    name="testRevel"
+                    value="최상"
+                  />
+                  <label for="radio-7">최상</label>
+                </div>
+              </div>
+            </div>
+            <div class="btn">
+              <button class="submitBtn"><span>결과 보기</span></button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
