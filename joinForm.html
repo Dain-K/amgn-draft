@@ -6,206 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>아무거나</title>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script type="text/javascript" src="./js/join.js"></script>
-    <style>
-      * {
-        box-sizing: border-box;
-        padding: 0;
-        margin: 0;
-        color: inherit;
-        font: inherit;
-      }
-      body {
-        font-family: "Noto Sans KR", sans-serif;
-      }
-      div {
-        display: block;
-      }
-      button {
-        cursor: pointer;
-      }
-      ol,
-      ul {
-        list-style: none;
-      }
-      a {
-        text-decoration: none;
-        cursor: pointer;
-      }
-      select {
-        font-family: "Noto Sansf KR", sans-serif;
-        font-size: 1rem;
-        font-weight: 400;
-        line-height: 1.5;
-
-        color: #444;
-        background-color: #fff;
-
-        padding: 0.6em 1.4em 0.5em 0.8em;
-        margin: 0;
-
-        border: 1px solid #aaa;
-        border-radius: 0.5em;
-        box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
-      }
-      select:hover {
-        border-color: #888;
-      }
-
-      select:focus {
-        border-color: #aaa;
-        box-shadow: 0 0 1px 3px rgba(59, 153, 252, 0.7);
-        box-shadow: 0 0 0 3px -moz-mac-focusring;
-        color: #222;
-        outline: none;
-      }
-      input:focus {
-        border-color: #aaa;
-        box-shadow: 0 0 1px 3px rgba(59, 153, 252, 0.7);
-        box-shadow: 0 0 0 3px -moz-mac-focusring;
-        color: #222;
-        outline: none;
-      }
-      .nav {
-        position: sticky;
-        z-index: 2;
-        top: 0;
-        display: flex;
-        width: 100%;
-        height: 4.75rem;
-        align-items: center;
-        justify-content: center;
-        background-color: #252a38;
-        font-weight: 0.875rem;
-        /* border: 1px solid pink; */
-      }
-      .nav .logo-box {
-        display: flex;
-        height: 4.75rem;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 2rem;
-      }
-      .nav .logo-box a {
-        display: flex;
-        align-items: center;
-      }
-      .nav .logo-box img {
-        width: 13.5rem;
-        height: auto;
-      }
-      .cover {
-        display: flex;
-        width: 100%;
-        min-height: 150vh;
-        background: #252a38;
-        justify-content: center;
-      }
-      .cover .main {
-        display: flex;
-        background: #252a38;
-        z-index: 1;
-      }
-
-      .cover .main .content {
-        width: 500px;
-        height: 100%;
-        padding: 0 1.25rem;
-      }
-      .cover .main .content .box {
-        position: relative;
-        display: flex;
-        height: 100%;
-        flex-direction: column;
-      }
-      .cover .main .content .box.right {
-        align-items: flex-end;
-        /* border: 1px solid blue; */
-      }
-      .cover .main .content .box .id-cover {
-        width: 100%;
-        margin-top: 3rem;
-        background-color: #fff;
-        border-radius: 1rem;
-      }
-      .id-box {
-        display: flex;
-        height: 100%;
-        flex-direction: column;
-        align-items: center;
-      }
-      .id-box .login-title {
-        width: 100%;
-        padding: 40px 0 5px 0;
-        font-weight: 900;
-        font-size: 1.2rem;
-        text-align: center;
-      }
-      .element {
-        width: 100%;
-        height: 100%;
-        padding: 1.875rem 2rem;
-        border-radius: 0.9375rem;
-        background: #fff;
-      }
-      .element .title {
-        width: 100%;
-        margin-bottom: 0.6rem;
-      }
-      .element .title h2 {
-        font-weight: 700;
-        font-size: 1rem;
-      }
-      .element .email-input {
-        position: relative;
-        width: 100%;
-        padding-bottom: 35px;
-      }
-      .Error {
-        padding-top: 3px;
-      }
-      .Error p {
-        font-size: 0.8rem;
-        color: #ff0000;
-      }
-      .element .email-input .input-box {
-        width: 100%;
-        height: 2.875rem;
-        padding: 0.5rem 0.875rem 0.5rem 0.875rem;
-        border: 1px solid #d2d2d2;
-        border-radius: 0.3rem;
-      }
-      .element .email-input .input-box.active {
-        width: 100%;
-        height: 2.875rem;
-        padding: 0.5rem 0.875rem 0.5rem 0.875rem;
-        border: 1.5px solid #ff0000;
-        border-radius: 0.3rem;
-      }
-      .element .email-input .input-box.check {
-        margin-top: 10px;
-      }
-
-      .element .email-input .radioBox {
-        display: block;
-        width: 100%;
-        height: 2.875rem;
-        padding: 0.5rem 0.875rem 0.5rem 0.5rem;
-        border: 1px solid #d2d2d2;
-        border-radius: 0.3rem;
-      }
-
-      .element .btn {
-        width: 100%;
-        height: 2.8rem;
-        margin: 18px 0 1px 0;
-        border: none;
-        border-radius: 0.3rem;
-        font-weight: 700;
-        color: #fff;
-        background-color: #252a38;
-      }
-    </style>
+    <script type="text/javascript" src="js/join.js"></script>
+    <link rel="stylesheet" href="css/joinForm.css" />
+    <link rel="icon" type="image/png" href="images/favicon.ico" />
   </head>
   <body>
     <div class="nav">
@@ -221,28 +24,34 @@
               <div class="id-box">
                 <div class="login-title"><h2>회원가입</h2></div>
                 <div class="element">
-                  <form method="post" action="/join">
-                    <div class="title"><h2>이름</h2></div>
+                  <form method="POST" action="/join">
+                    <div class="title"><h2>아이디</h2></div>
                     <div class="email-input">
                       <input
                         type="text"
+                        id="username"
+                        name="username"
                         class="input-box"
-                        placeholder="이름을 입력해주세요"
-                        required
+                        placeholder="아이디를 입력해주세요"
                       />
+                      <div class="Error" name="userError" id="userError">
+                        <p>이름을 입력하세요.</p>
+                      </div>
                     </div>
                     <div class="title">
                       <h2>이메일</h2>
                     </div>
                     <div class="email-input">
                       <input
+                        type="email"
                         id="email"
                         name="email"
                         class="input-box"
-                        type="email"
                         placeholder="이메일을 입력해주세요"
-                        required
                       />
+                      <div class="Error" name="emailError2" id="emailError2">
+                        <p>이메일을 입력하세요.</p>
+                      </div>
                       <div class="Error" name="emailError" id="emailError">
                         <p>이메일 형식이 맞지 않습니다.</p>
                       </div>
@@ -277,12 +86,10 @@
                     <div class="email-input">
                       <input
                         type="date"
-                        data-placeholder="날짜 선택"
-                        required
                         id="birth"
-                        aria-required="true"
+                        name="birth"
+                        data-placeholder="날짜 선택"
                         class="input-box"
-                        required
                       />
                     </div>
                     <div class="title">
@@ -291,32 +98,39 @@
                     <div class="email-input">
                       <input
                         type="tel"
-                        name="tel"
-                        id="telInput"
-                        required
+                        name="phone"
+                        id="phone"
                         maxlength="13"
                         class="input-box"
                         placeholder="010-1234-5678"
                         oninput="oninputPhone(this)"
-                        required
                       />
+                      <div class="Error" name="phoneError" id="phoneError">
+                        <p>전화번호를 입력하세요.</p>
+                      </div>
                     </div>
+
                     <div class="title">
                       <h2>성별</h2>
                     </div>
                     <div class="email-input">
-                      <select name="sex" id="sex" class="radioBox">
+                      <select name="gender" id="gender" class="radioBox">
                         <option disabled selected>성별을 선택하세요</option>
                         <option value="male">남자</option>
                         <option value="female">여자</option>
-                        <option value="none">선택안함</option>
+                        <option value="null">선택안함</option>
                       </select>
                     </div>
                     <div class="title">
                       <h2>거주지역</h2>
                     </div>
                     <div class="email-input">
-                      <select name="location" id="location" class="radioBox">
+                      <select
+                        name="address"
+                        id="address"
+                        name="address"
+                        class="radioBox"
+                      >
                         <option disabled selected>거주지역을 선택하세요</option>
                         <option value="02">서울</option>
                         <option value="031">경기</option>
@@ -329,7 +143,6 @@
                         <option value="052">울산</option>
                         <option value="053">대구</option>
                         <option value="054">경북</option>
-                        <option value="054">경북</option>
                         <option value="055">경남</option>
                         <option value="061">전남</option>
                         <option value="062">광주</option>
@@ -341,7 +154,7 @@
                       <h2>학력</h2>
                     </div>
                     <div class="email-input">
-                      <select name="school" id="school" class="radioBox">
+                      <select name="education" id="education" class="radioBox">
                         <option disabled selected>최종학력을 선택하세요</option>
                         <option value="high_gradu">고등학교</option>
                         <option value="univ">대학교</option>
@@ -352,11 +165,11 @@
                         <h2>상태</h2>
                       </div>
                       <div class="email-input">
-                        <select class="radioBox">
+                        <select class="radioBox" name="status" id="status">
                           <option disabled selected>상태를 선택하세요</option>
-                          <option value="high_gradu">재학중</option>
+                          <option value="univ_ing">재학중</option>
                           <option value="univ">졸업예정</option>
-                          <option value="univ">졸업</option>
+                          <option value="univ_gradu">졸업</option>
                         </select>
                       </div>
                       <div class="title">
@@ -365,6 +178,8 @@
                       <div class="email-input">
                         <input
                           type="text"
+                          id="university"
+                          name="university"
                           class="input-box"
                           placeholder="영남대학교"
                         />
@@ -375,6 +190,8 @@
                       <div class="email-input">
                         <input
                           type="text"
+                          id="department"
+                          name="department"
                           class="input-box"
                           placeholder="정보통신공학과"
                         />
@@ -405,7 +222,7 @@
                         <option value="none">선택안함</option>
                       </select>
                     </div>
-                    <button class="btn"><span>다음</span></button>
+                    <button class="btn" id="submit"><span>다음</span></button>
                   </form>
                 </div>
               </div>
