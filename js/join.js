@@ -2,11 +2,28 @@ $(document).ready(function () {
   var idx = true;
   $("#userError").hide();
   $("#emailError2").hide();
+  $("#birthError").hide();
   $("#phoneError").hide();
+  $("#genderError").hide();
+  $("#addError").hide();
+  $("#eduError").hide();
+  $("#mbtiError").hide();
+  $("#statusError").hide();
+  $("#univError").hide();
+  $("#deError").hide();
+  const userClass = document.getElementById("username").classList;
+  const emailClass = document.getElementById("email").classList;
+  const birthClass = document.getElementById("birth").classList;
+  const phoneClass = document.getElementById("phone").classList;
+  const genderClass = document.getElementById("gender").classList;
+  const addClass = document.getElementById("address").classList;
+  const eduClass = document.getElementById("education").classList;
+  const mbtiClass = document.getElementById("mbti").classList;
+  const stClass = document.getElementById("status").classList;
+  const univClass = document.getElementById("university").classList;
+  const deClass = document.getElementById("department").classList;
+
   $("#submit").click(function () {
-    const userClass = document.getElementById("username").classList;
-    const emailClass = document.getElementById("email").classList;
-    const phoneClass = document.getElementById("phone").classList;
     $("#username").change(function () {
       userClass.remove("active");
       $("#userError").hide();
@@ -25,9 +42,14 @@ $(document).ready(function () {
       idx = false;
     }
 
+    $("#birth").change(function () {
+      birthClass.remove("active");
+      $("#birthError").hide();
+    });
     if ($("#birth").val().length == 0) {
-      alert("생일을 입력하세요.");
+      $("#birthError").show();
       $("#birth").focus();
+      birthClass.add("active");
       idx = false;
     }
 
@@ -42,40 +64,80 @@ $(document).ready(function () {
       idx = false;
     }
 
+    $("select[name=gender]").change(function () {
+      genderClass.remove("active");
+      $("#genderError").hide();
+    });
     if (!$("select[name=gender]").val()) {
-      alert("성별을 선택하세요.");
+      genderClass.add("active");
+      $("#genderError").show();
       $("select[name=gender]").focus();
       idx = false;
     }
+
+    $("select[name=address]").change(function () {
+      addClass.remove("active");
+      $("#addError").hide();
+    });
     if (!$("select[name=address]").val()) {
-      alert("거주지역을 선택하세요.");
+      addClass.add("active");
+      $("#addError").show();
       $("select[name=address]").focus();
       idx = false;
     }
+
+    $("select[name=education]").change(function () {
+      eduClass.remove("active");
+      $("#eduError").hide();
+    });
     if (!$("select[name=education]").val()) {
-      alert("최종학력을 선택하세요.");
+      eduClass.add("active");
+      $("#eduError").show();
       $("select[name=education]").focus();
       idx = false;
     }
     if ($("select[name=education]").val() == "univ") {
+      $("select[name=status]").change(function () {
+        stClass.remove("active");
+        $("#statusError").hide();
+      });
       if (!$("select[name=status]").val()) {
-        alert("상태를 선택하세요.");
+        stClass.add("active");
+        $("#statusError").show();
         $("select[name=status]").focus();
         idx = false;
       }
+
+      $("#university").change(function () {
+        univClass.remove("active");
+        $("#univError").hide();
+      });
       if ($("#university").val().length == 0) {
-        alert("대학교를 입력하세요.");
+        univClass.add("active");
+        $("#univError").show();
         $("#university").focus();
         idx = false;
       }
+
+      $("#department").change(function () {
+        deClass.remove("active");
+        $("#deError").hide();
+      });
       if ($("#department").val().length == 0) {
-        alert("학과를 입력하세요.");
+        deClass.add("active");
+        $("#deError").show();
         $("#department").focus();
         idx = false;
       }
     }
+
+    $("select[name=mbti]").change(function () {
+      mbtiClass.remove("active");
+      $("#mbtiError").hide();
+    });
     if (!$("select[name=mbti]").val()) {
-      alert("mbti을 선택하세요.");
+      mbtiClass.add("active");
+      $("#mbtiError").show();
       $("select[name=mbti]").focus();
       idx = false;
     }
@@ -107,25 +169,50 @@ $(function () {
   });
 
   /* 비밀번호와 비밀번호 확인이 일치하는지 비교 판단 */
+
   $("#pwError").hide();
+  $("#password").change(function () {
+    const pw = $("#password").val();
+    const pwCheck = $("#passwordCheck").val();
+    const pwClass = document.getElementById("password").classList;
+    const pwcClass = document.getElementById("passwordCheck").classList;
+    var reg = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
+    // 최소 8자, 하나이상의 문자, 하나의 숫자 및 하나의 특수문자 정규식
+    if (!reg.test(pw)) {
+      alert("비밀번호 형식이 맞지 않습니다.");
+      pwClass.add("active");
+    } else {
+      if (pw != pwCheck) {
+        pwClass.add("active");
+        pwcClass.add("active");
+        $("#pwError").show();
+      }
+      if (pw == pwCheck) {
+        pwClass.remove("active");
+        pwcClass.remove("active");
+        $("#pwError").hide();
+      }
+    }
+  });
   $("#passwordCheck").change(function () {
     // 비밀번호 확인이 입력되면 동작
     const pw = $("#password").val();
     const pwCheck = $("#passwordCheck").val();
-    const className = document.getElementById("password").classList;
-    const className2 = document.getElementById("passwordCheck").classList;
+    const pwClass = document.getElementById("password").classList;
+    const pwcClass = document.getElementById("passwordCheck").classList;
     if (pw != pwCheck) {
-      className.add("active");
-      className2.add("active");
+      pwClass.add("active");
+      pwcClass.add("active");
       $("#pwError").show();
     }
     if (pw == pwCheck) {
-      className.remove("active");
-      className2.remove("active");
+      pwClass.remove("active");
+      pwcClass.remove("active");
       $("#pwError").hide();
     }
   });
 
+  /* 대학교를 선택할 경우 선택지를 더 보여줌 */
   $("#selboxDirect").hide();
   $("#education").change(function () {
     // 대학교를 선택할 경우 나타남
